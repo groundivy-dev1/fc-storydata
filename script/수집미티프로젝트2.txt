@@ -224,6 +224,8 @@ def lambda_handler(event, context):
         'password': 'Epxxj12#',
         'host': 'dataxxfc.cgfpdcibdeds.ap-northeast-2.rds.amazonaws.com',
         'database': 'pipelinedb',
+        'charset': 'utf8mb4',
+        'collation': 'utf8mb4_general_ci'  # 중요!
     }
     connection = mysql.connector.connect(**db_config)
     cursor = connection.cursor()
